@@ -1,0 +1,169 @@
+/*
+* 地质图库内容样式
+*/
+
+.servicelist li
+{
+    padding: 0px;
+    height: auto;
+    overflow: hidden;
+    line-height: 28px;
+    position: relative;
+}
+
+.servicelist li .img-item {
+    float: left;
+}
+
+.servicelist li img {
+    width: 300px;
+    height: 200px;
+    padding: 1px;
+    border: 2px solid #d0d1d5;
+    margin: 20px;
+}
+
+.servicelist .info-item
+{
+    float: right;
+    width: 650px;
+    margin: 20px 0px;
+}
+
+.servicelist li h3 {
+    color: #2f71c7;
+    font-size: 18px;
+}
+.servicelist li h3 a {
+    font-size: 18px;
+    color: #2f71c7;
+    float: none;
+    background: transparent;
+    padding-left: 0px;
+}
+
+.servicelist li p {
+    font-size: 13px;
+    line-height: 20px;
+    color: #63686b;
+    padding-top: 15px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.maplist li .info {
+    color: #63686B;
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+/*筛选*/
+.sortbar
+{
+    border-bottom: 1px solid #eee;
+    height: 29px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding: 5px 0 5px 8px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.sort dt
+{
+    float: left;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #6c6c6c;
+}
+
+.sort dd
+{
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    height: 24px;
+    line-height: 22px;
+    background: #fff;
+}
+
+    .sort dd a
+    {
+        padding: 0 20px;
+        display: block;
+        color: #000;
+    }
+
+    .sort dd.down, .sort dd.up, .sort dd.reg
+    {
+        position: relative;
+    }
+
+    .sort dd.curr
+    {
+        background: #2466cf;
+    }
+
+        .sort dd.curr a
+        {
+            color: #fff;
+        }
+
+    .sort dd.down a, .sort dd.up a, .sort dd.reg a
+    {
+        padding-right: 20px;
+    }
+    /*.sort dd.down i{ background:url(../images/down.png) no-repeat; display: inline-block; height: 12px; width: 12px; position: absolute; right: 6px; top: 5px;}*/
+    .sort dd.up i
+    {
+        background: url(../../images/up.png) no-repeat;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        right: 6px;
+        top: 5px;
+    }
+
+    .sort dd.reg i
+    {
+        background: url(../../images/down.png) no-repeat;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        right: 6px;
+        top: 5px;
+    }
+
+
+.sort-style
+{
+    float: right;
+    margin-right: 56px;
+}
+
+    .sort-style a
+    {
+        color: #000;
+    }
+
+/*左侧类别小图标*/
+.side-nav li i
+{
+    margin-left: 32px;
+    margin-top: 14px;
+    margin-right: 4px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    display: block;
+}

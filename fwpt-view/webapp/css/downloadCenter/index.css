@@ -1,0 +1,69 @@
+/*
+*下载中心内容样式
+*/
+
+li h3.file-pdf
+{
+    background: url(../../images/pdf-26.png) no-repeat 0 center;
+}
+
+.downlist li, .dzzllist li
+{
+    padding: 15px 15px 5px 70px;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+    overflow: hidden;
+    line-height: 28px;
+}
+
+.downlist li
+{
+    padding: 10px 0px 10px 0px;
+}
+
+    .downlist li h3
+    {
+        padding-left: 30px;
+    }
+
+        .downlist li h3 a
+        {
+            font-size: 16px;
+            color: #3072c5;
+            float: none;
+            background: transparent;
+            padding-left: 0px;
+            font-weight: 200;
+        }
+
+
+
+        .downlist li h3 span
+        {
+            float: right;
+            width: 160px;
+            color: #acb1b4;
+            font-family: '宋体';
+            font-weight: 200;
+            font-size: 14px;
+        }
+
+.listbox_title
+{
+    background: url(../../images/listbox-title-bg.png) repeat-x 0 bottom;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3072C5;
+    height: 42px;
+    margin-top: 10px;
+}
+
+    .listbox_title span
+    {
+        border-bottom: 2px solid #367fcb;
+        height: 42px;
+        display: inline-block;
+        padding: 0 20px;
+        line-height: 40px;
+        overflow: hidden;
+    }

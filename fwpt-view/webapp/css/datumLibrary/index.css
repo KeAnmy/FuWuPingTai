@@ -1,0 +1,81 @@
+﻿/*资料库*/
+
+.side-nav li i
+{
+    margin-left: 32px;
+    margin-top: 14px;
+    margin-right: 4px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.datumlist
+{
+}
+
+.el-card
+{
+    height: 180px;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    overflow: hidden;
+    color: #303133;
+    transition: .3s;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    margin: 20px 0;
+}
+
+.right_info
+{
+    float: left;
+    width: 85%;
+    padding: 20px 0 20px 46px;
+}
+
+.right_info_item
+{
+    height: 30px;
+    position: relative;
+}
+
+.file-type-img.pdf
+{
+    background: url("../../images/file_type.png") no-repeat 0px 0px;
+}
+
+.file-type-img
+{
+    width: 16px;
+    height: 16px;
+    left: -23px;
+    position: absolute;
+    top: 2px;
+}
+
+.material_head:hover
+{
+    color: #3a85c6;
+}
+
+.right_info table {
+
+    width: 100%;
+    font-size: 12px;
+    color: #666666;
+   text-align:left;
+
+}
+.right_info table tr {
+
+    height: 28px;
+
+}
+.right_info table tr td:first-child {
+
+    width: 347px;
+    padding-left: 25px;
+
+}

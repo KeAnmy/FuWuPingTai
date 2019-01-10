@@ -1,0 +1,20 @@
+/*
+* 常用样式表
+*/
+.fl{float: left;}
+.fr{float: right;}
+.clear{clear: both;zoom:1;}
+.c{clear: both;zoom:1;}
+.pt10{padding-top: 10px;}
+input[type="radio"] {margin-top:0;vertical-align:-2px;}
+input[type="checkbox"] {margin-top:0;vertical-align:-2px;}
+.hide{display: none;}
+
+.tl {text-align:left;}
+.tc {text-align:center;}
+.tr {text-align:right;}
+.mb10{margin-bottom: 10px;}
+.mt10{margin-top: 10px;}
+.ml10{margin-left: 10px;}
+.pt10{padding-top: 10px;}
+

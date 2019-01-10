@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<db>
+    <server>10.17.5.86</server>
+    <port>1521</port>
+    <servicename>smgeOracleDB@10.17.5.86</servicename>
+    <name>dzpt</name>
+    <user>dzpt</user>
+    <pwd>dzpt</pwd>
+</db>
+
+
+
+
+
+
+
+
+
+
+
+

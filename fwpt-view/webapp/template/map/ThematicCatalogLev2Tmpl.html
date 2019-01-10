@@ -1,0 +1,30 @@
+﻿{each data as value}   
+    <li class="children children-lv2" id="{value.ProjectNo}">
+        <a class="lv2-title" href="javascript:void(0);">
+            <span class="lv2checkbox checkbox"></span>
+            <span class="lv2-text">{showValue(value.ProjectName)}
+
+            </span>
+            <span class="help"></span>
+
+        </a>
+        <div class="lv2-info"></div>
+        <ul class="ul-leaf-2" style="display: none;">
+            {if value.ListZKData!=null} 
+          {each value.ListZKData as child}
+          <li class="children children-lv3" id="{child.ID}" data-pid="{value.ProjectNo}">
+              <a class="lv3-title" href="javascript:void(0);">
+                  <span class="lv3checkbox checkbox"></span>
+                  <span class="lv3-text">{child.ZKBH}
+                  </span>
+                  <span class="help"></span>
+
+              </a>
+              <div class="lv3-info"></div>
+
+          </li>
+            {/each}
+            {/if}
+        </ul>
+    </li>
+{/each}
