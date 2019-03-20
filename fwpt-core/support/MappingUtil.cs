@@ -39,7 +39,41 @@ public class MappingUtil
             foreach (var prop in type.GetProperties())
             {
                 // 给目标类型对象的各个属性值赋值
-                prop.SetValue(obj, dRow[prop.Name], null);
+                if (prop != null && dRow[prop.Name]!=DBNull.Value)
+                {
+                    prop.SetValue(obj, dRow[prop.Name], null);
+                }
+                
+            }
+            list.Add(obj as T);
+        }
+        return list;
+    }
+
+
+    /// <summary>
+    /// 将DataTable映射为实体对象列表
+    /// </summary>
+    /// <typeparam name="T">对象实体类型</typeparam>
+    /// <param name="sourceDT">源数据表</param>
+    /// <returns></returns>
+    public static List<T> GetEntityFromDataRowArr<T>(DataRow[] sourceDRS) where T : class
+    {
+        List<T> list = new List<T>();
+        // 获取需要转换的目标类型
+        Type type = typeof(T);
+        foreach (DataRow dRow in sourceDRS)
+        {
+            // 实体化目标类型对象
+            object obj = Activator.CreateInstance(type);
+            foreach (var prop in type.GetProperties())
+            {
+                // 给目标类型对象的各个属性值赋值
+                if (prop != null && dRow[prop.Name] != DBNull.Value)
+                {
+                    prop.SetValue(obj, dRow[prop.Name], null);
+                }
+
             }
             list.Add(obj as T);
         }

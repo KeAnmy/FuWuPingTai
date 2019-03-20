@@ -2,12 +2,17 @@
 
 <script runat="server">
 
+    void Application_Init(object sender,EventArgs e)
+    {
+       
+    }
+
     void Application_Start(object sender, EventArgs e) 
     {
         // 在应用程序启动时运行的代码
-        //初始化全局数据库帮助类
-        DBConnectInit.InitGlobalDBHelper(HttpContext.Current.Server.MapPath(@"~/resources/dbOracle.xml"));
-        
+        //初始化全局数据库帮助类   
+        RequestUtil.LogsFolderPath = HttpContext.Current.Server.MapPath(@"~");
+        DBConnectInit.InitGlobalDBHelper(HttpContext.Current.Server.MapPath(@"~/resources/dbOracle.xml"));  
     }
     
     void Application_End(object sender, EventArgs e) 

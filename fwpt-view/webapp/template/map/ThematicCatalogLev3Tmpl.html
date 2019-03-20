@@ -1,16 +1,13 @@
 ﻿{each data as value}   
-    <li class="children children-lv3" id="{value.ID}">
-      <a class="lv3-title" href="javascript:void(0);">
-        <span class="checkbox"></span>
-        <span class="lv3-text">
-        
-        {value.zkbh}
+    <li class="children children-lv2" id="{value.ProjectNo}">
+        <a class="lv2-title" href="javascript:void(0);">
+            <span class="lv2checkbox checkbox"></span>
+            <span class="lv2-text">{showValue(value.ProjectName)}
 
-        </span>
-        <span class="help"></span>
+            </span>
+            <span class="help"></span>
 
-      </a>
-      <div class="lv3-info"></div>
-
+        </a>
     </li>
 {/each}
+

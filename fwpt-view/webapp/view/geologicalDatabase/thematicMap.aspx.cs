@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WebForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,5 +11,6 @@ public partial class App_Web_view_geologicalDatabase_thematicMap : System.Web.UI
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+      
     }
 }

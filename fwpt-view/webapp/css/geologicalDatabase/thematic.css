@@ -294,7 +294,6 @@ h3 {
 .children-lv2.active .lv2-title {
     background: #f0f0f0;
     color: #4187e7;
-
 }
 
 .lv1-title {
@@ -374,13 +373,15 @@ h3 {
     background-position: -78pt 0;
 }*/
 
-.children-lv1.ischecked .lv1checkbox{
+.children-lv1.ischecked .lv1checkbox {
     background-position: -78pt 0;
 }
-.children-lv2.ischecked .lv2checkbox{
+
+.children-lv2.ischecked .lv2checkbox {
     background-position: -78pt 0;
 }
-.children-lv3.ischecked .lv3checkbox{
+
+.children-lv3.ischecked .lv3checkbox {
     background-position: -78pt 0;
 }
 
@@ -556,4 +557,40 @@ h3 {
     -webkit-transition: background-color.2s linear;
     -moz-transition: background-color .2s linear;
     transition: background-color .2s linear;
+}
+
+#mouse-position {
+    float: left;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 200px;
+    height: 20px; /* 将z-index设置为显示在地图上层 */
+    z-index: 1000;
+}
+
+.custom-mouse-position {
+    color: black;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+
+.cursor-pan {
+    cursor: -webkit-grab;
+}
+
+#mask {
+    position: absolute;
+    display:none;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0.3;
+    background: #000;
+}
+
+.waiting {
+    display:none;
+    position: absolute;
 }

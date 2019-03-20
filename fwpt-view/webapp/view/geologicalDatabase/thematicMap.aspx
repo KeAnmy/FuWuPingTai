@@ -13,8 +13,6 @@
     <link href="../../lib/openlayer/ol.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../../lib/openlayer/ol.js" charset="utf-8"></script>
 
-
-
 </head>
 <body>
     <!--#include file="../common/headerMap.html"-->
@@ -22,7 +20,9 @@
     <div id="container">
         <div id="map-main">
             <!-- 地图容器 -->
-            <div id="map"></div>
+            <div id="map">
+            </div>
+            <!--左侧数据目录-->
             <div class="left-box">
                 <div class="left-tool ">
                     <header class="clearfix title">
@@ -50,44 +50,10 @@
                                 <a href="javascript:void(0);" class="clear-all"><span></span>重置</a>
                             </div>
                             <div id="subjectTree" class="ps-container">
-                                   <ul class="classify-children">
-                                     </ul>
-
-                               <%-- <ul class="classify-children">
-                                    <li class="children children-lv1" id="subject_1"><a class="lv1-title" href="javascript:void(0);"><span class="lv1checkbox"></span>地质钻孔<span class="triangle-down"></span></a>
-                                        <ul class="ul-leaf" style="display: none;">
-                                            <li class="children children-lv2" id="subject_1_1"><a class="lv2-title" href="javascript:void(0);"><span class="checkbox"></span><span class="lv2-text">钻孔</span><span class="help"></span></a><div class="lv2-info"></div>
-                                                <ul class="ul-leaf" style="display: none;">
-                                                    <li class="children children-lv3" id="Li1"><a class="lv3-title" href="javascript:void(0);"><span class="checkbox"></span><span class="lv2-text">钻孔1</span><span class="help"></span></a><div class="lv2-info"></div>
-                                                    </li>
-                                             
-
-                                                </ul>
-
-                                            </li>
-                                            <li class="children children-lv2" id="subject_1_2"><a class="lv2-title" href="javascript:void(0);"><span class="checkbox"></span><span class="lv2-text">工程区域</span><span class="help"></span></a><div class="lv2-info"></div>
-                                            </li>
-                                            <li class="children children-lv2" id="subject_1_3"><a class="lv2-title" href="javascript:void(0);"><span class="checkbox"></span><span class="lv2-text">土层</span><span class="help"></span></a><div class="lv2-info"></div>
-                                            </li>
-                                            <li class="children children-lv2" id="subject_1_4"><a class="lv2-title" href="javascript:void(0);"><span class="checkbox"></span><span class="lv2-text">地下水</span><span class="help"></span></a><div class="lv2-info"></div>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="children children-lv1" id="subject_2"><a class="lv1-title" href="javascript:void(0);"><span class="lv1checkbox"></span>工程区域<span class="triangle-down"></span></a>
-
-                                    </li>
-
-                                    <li class="children children-lv1" id="subject_3"><a class="lv1-title" href="javascript:void(0);"><span class="lv1checkbox"></span>资料目录<span class="triangle-down"></span></a>
-
-                                    </li>
-
-                                </ul>--%>
-
-
+                                <ul class="classify-children">
+                                </ul>
                             </div>
                         </div>
-
 
                         <div class="search-content searched" style="display: none;">
                             <div class="classify-tool clearfix">
@@ -140,6 +106,42 @@
                     <i class="hide-tab">数据目录</i>
                 </div>
             </div>
+
+            <!--右侧工具条-->
+            <div class="toolbar-box">
+                <div id="city-tools" style="display: none;">
+                    <ul class="user-toolbar">
+                        <li id="city-change">
+                            <a href="#">
+                                <i class="region"></i>
+                                <span id="city-name"></span>
+                                <!-- <b></b> -->
+                            </a>
+                            <!-- 行政区定位弹框  -->
+                            <div id="city-change-box" class="popup hide"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="map-tools"></div>
+            </div>
+            <!--属性信息框-->
+            <div class="indentify-box">
+            </div>
+
+            <!--右键菜单-->
+            <div id="map-rightKey"></div>
+
+            <!--地图位置控件-->
+            <div id="mouse-position">
+            </div>
+
+        </div>
+
+        <!--遮罩面板-->
+        <div id="mask">
+        </div>
+        <div class="waiting">
+            <img src="../../images/common/waiting5.gif" />
         </div>
     </div>
 

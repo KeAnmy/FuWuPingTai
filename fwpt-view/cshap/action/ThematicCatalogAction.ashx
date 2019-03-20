@@ -4,7 +4,6 @@ using System;
 using System.Web;
 using System.Collections.Generic;
 
-
 public class ThematicCatalogAction : IHttpHandler
 {
     public void ProcessRequest(HttpContext context)
@@ -18,6 +17,9 @@ public class ThematicCatalogAction : IHttpHandler
             case "zkdata":
                 responseString = this.GetZKPointsData();
                 break; 
+            case "gcdata":
+                responseString = this.GetGcqyData();
+                break;
             default:
                 responseString = "[]";
                 break;
@@ -35,6 +37,15 @@ public class ThematicCatalogAction : IHttpHandler
         List<MultilevelZKData> lstZKPoints = gepzkdatasRepository.GetAll();
         string datas = MappingUtil.Convert2JSON<MultilevelZKData>(lstZKPoints);
         return datas;
+    }
+
+    //获取工程区域数据
+    private string GetGcqyData()
+    {
+        GeoGcqyDataRepository gcqyRy = new GeoGcqyDataRepository();
+        List<GeoGcqyData> lstgc = gcqyRy.GetAllRecords();
+        string data = MappingUtil.Convert2JSON<GeoGcqyData>(lstgc);
+        return data;
     }
     
     #endregion

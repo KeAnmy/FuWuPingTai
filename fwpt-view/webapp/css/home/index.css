@@ -465,7 +465,7 @@ a,input,button{ outline:none; }
 .fb-cont{/* width: 1260px; margin: 0 auto;*/}
 .version-header{ height: 120px;  background: #fff;}
 .fb-header-wrap{ background: none; }
-.fb-logo{ float: left; background: url(../../images/home/fb-logo.png) no-repeat; width:367px; height: 50px; margin: 12px 0 0 15px;}
+.fb-logo{ float: left; background: url(../../images/home/fb-logo.png) no-repeat; width:430px; height: 50px; margin: 12px 0 0 15px;}
 .fb-user-bar{float: right; height: 30px; margin: 20px 20px 0 0;}
 .fb-input-box{ float: left; }
 .fb-login-box{ float: left; height: 30px; margin-left: 44px;}

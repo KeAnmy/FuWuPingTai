@@ -65,10 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\GeoGcqyDataRepository.cs" />
     <Compile Include="dao\GeoZkPointsDataRepository.cs" />
+    <Compile Include="domain\GeoGcqyData.cs" />
     <Compile Include="domain\GeoZkPointsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="support\DBConnectInit.cs" />
+    <Compile Include="support\ExportAccessUtil.cs" />
     <Compile Include="support\MappingUtil.cs" />
     <Compile Include="support\RequestUtil.cs" />
     <Compile Include="support\XmlHelper.cs" />

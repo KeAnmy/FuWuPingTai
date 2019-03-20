@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using ZYSK.DZPT.Base;
 using ZYSK.DZPT.Base.DbBase;
 using ZYSK.DZPT.Base.DbBase.Oracle;
@@ -18,6 +19,7 @@ public class RequestUtil
 
     #region private 字段
     private static IDBHelper _db = null;
+    private static string _logPath ="";
 
     #endregion
 
@@ -30,7 +32,12 @@ public class RequestUtil
     {
         get
         {
-            return @"C:/";
+            return _logPath;
+          
+        }
+        set
+        {
+            _logPath = value;
         }
     }
 

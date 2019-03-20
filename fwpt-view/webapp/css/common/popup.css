@@ -1,0 +1,58 @@
+/*.ol-popup {
+    position: absolute;
+    background-color: white;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+}
+
+    .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+    }
+
+    .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+    }
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+    .ol-popup-closer:after {
+        content: "✖";
+    }*/
+
+
+/*弹出框样式*/
+.popup{width: 340px;cursor: default; background:#fff; border: 1px solid #ddd; z-index:9990; /*display:none;*/}
+.popup-tit{ height: 30px; line-height: 30px; background: #fbfbfb; border-bottom: 1px solid #eee; padding:0 10px; position: relative; width: auto;}
+.popup-tit h3{ font-size: 14px;}
+.popup-tit a{ position: absolute; right: 9px; top: 9px; width: 12px; height: 12px; background: url(./../../images/delete.png) no-repeat; text-indent: -9999px;}
+.popup-tit a:hover{ background: url(./../../images/delete-h.png) no-repeat;}
+.popup-con{ position: relative; /*padding: 10px;*/}
+
+
+.item-name {background-color: #eee;border-bottom:solid 1px #fff;border-right:solid 1px #eee;width:40%}
+.item-value {border-bottom:solid 1px #eee;}

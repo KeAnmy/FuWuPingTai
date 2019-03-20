@@ -27,15 +27,23 @@ public class DBConnectInit
     {
         try
         {
-            Dictionary<string, string> dicDBConfig = XmlHelper.ReaderXML(dncfgPath);//RequestUtil.ConfigFolderPath + @"dbOracle.xml"
-            LogManager.WriteToDebug("读取数据库配置文件成功！", RequestUtil.LogsFolderPath);
-            _db = new OracleDBHelper();
-            _db.DBServer = dicDBConfig.Where(q => q.Key.Equals("server")).First().Value;
-            _db.DBPort = dicDBConfig.Where(q => q.Key.Equals("port")).First().Value;         
-            _db.DBServiceName = dicDBConfig.Where(q => q.Key.Equals("servicename")).First().Value;
-            _db.DBName = dicDBConfig.Where(q => q.Key.Equals("name")).First().Value;
-            _db.DBUser = dicDBConfig.Where(q => q.Key.Equals("user")).First().Value;
-            _db.DBPwd = dicDBConfig.Where(q => q.Key.Equals("pwd")).First().Value;
+            if (RequestUtil.GlobalDBHelper == null)
+            {
+                Dictionary<string, string> dicDBConfig = XmlHelper.ReaderXML(dncfgPath);//RequestUtil.ConfigFolderPath + @"dbOracle.xml"
+                LogManager.WriteToDebug("读取数据库配置文件成功！", RequestUtil.LogsFolderPath);
+                _db = new OracleDBHelper();
+                _db.DBServer = dicDBConfig.Where(q => q.Key.Equals("server")).First().Value;
+                _db.DBPort = dicDBConfig.Where(q => q.Key.Equals("port")).First().Value;
+                _db.DBServiceName = dicDBConfig.Where(q => q.Key.Equals("servicename")).First().Value;
+                _db.DBName = dicDBConfig.Where(q => q.Key.Equals("name")).First().Value;
+                _db.DBUser = dicDBConfig.Where(q => q.Key.Equals("user")).First().Value;
+                _db.DBPwd = dicDBConfig.Where(q => q.Key.Equals("pwd")).First().Value;
+            }
+            else
+            {
+                _db = RequestUtil.GlobalDBHelper;
+            }
+
             if (_db.TryConnect())
             {
                 LogManager.WriteToDebug("数据库连接成功", RequestUtil.LogsFolderPath);
@@ -44,14 +52,14 @@ public class DBConnectInit
             {
                 LogManager.WriteToDebug("数据库连接失败", RequestUtil.LogsFolderPath);
             }
-            DataTable dt = _db.DoQueryEx("select * from z_zuankong t");//select SDE.ST_ASTEXT(t.shape) from SDEGCPOLYGONS t
+            DataTable dt = _db.DoQueryEx("select SDE.ST_ASTEXT(t.shape) from SDEGCPOLYGONS t");
             string strTest = dt.Rows[0][0].ToString();
             LogManager.WriteToDebug("数据库读取空间数据测试成功", RequestUtil.LogsFolderPath);
             RequestUtil.GlobalDBHelper = _db;
         }
         catch (Exception ex)
         {
-            LogManager.WriteToError(ex.Message, RequestUtil.LogsFolderPath);
+            LogManager.WriteToError(ex.Message);
             LogManager.WriteToError("数据库连接失败！", RequestUtil.LogsFolderPath);
         }
 

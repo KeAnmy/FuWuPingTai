@@ -10,9 +10,9 @@
         </a>
         <div class="lv2-info"></div>
         <ul class="ul-leaf-2" style="display: none;">
-            {if value.ListZKData!=null} 
-          {each value.ListZKData as child}
-          <li class="children children-lv3" id="{child.ID}" data-pid="{value.ProjectNo}">
+            {if value.ListChildren!=null} 
+          {each value.ListChildren as child}
+          <li class="children children-lv3" id="{child.Id}" data-pid="{value.ProjectNo}">
               <a class="lv3-title" href="javascript:void(0);">
                   <span class="lv3checkbox checkbox"></span>
                   <span class="lv3-text">{child.ZKBH}
