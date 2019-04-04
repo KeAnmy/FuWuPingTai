@@ -1,6 +1,7 @@
 /*
 * 常用样式表
 */
+body {min-width:1320px;}/*设置浏览器窗口最小宽度*/
 .fl{float: left;}
 .fr{float: right;}
 .clear{clear: both;zoom:1;}
@@ -17,4 +18,6 @@ input[type="checkbox"] {margin-top:0;vertical-align:-2px;}
 .mt10{margin-top: 10px;}
 .ml10{margin-left: 10px;}
 .pt10{padding-top: 10px;}
+
+
 

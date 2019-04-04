@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>倾斜模型预览</title>
+    <!--#include file="../common/config.html"-->
+    <script type="text/javascript" src="../../lib/cesium/Cesium.js"></script>
+    <style>
+        @import url(../../lib/cesium/Widgets/widgets.css);
+        @import url(../../lib/cesium/Widgets/lighter.css);
+        @import url(../../lib/cesium/templates/bucket.css);
+
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #toolbar {
+            position:absolute;
+            left:10px;
+            top:10px;
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#tool-orign").click(function () {
+                viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(123.41, 41.76, 30),
+                    orientation: {
+                        heading: Cesium.Math.toRadians(0.0),
+                        pitch: Cesium.Math.toRadians(-25.0), //俯仰角
+                        roll: 0.0
+                    }
+                });
+            });
+
+        })
+
+    </script>
+
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    <div id="toolbar">
+        <button id="tool-orign" class="cesium-button cesium-toolbar-button">原点</button>
+    </div>
+
+    <script>
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwMWVlYTVlYi02YjMzLTQxN2QtYjBkYy1iM2JiZmYyNWIwNGQiLCJpZCI6ODQ3Niwic2NvcGVzIjpbImFzciIsImdjIl0sImlhdCI6MTU1MjAxOTU2M30.qZ7ZEC-Sk9nuyrBV0wdRsDgHFhe_gW2ZIgv9m50LsU0';
+
+        var position = Cesium.Cartesian3.fromDegrees(123.6841836, 41.215885);
+
+        var viewer = new Cesium.Viewer('cesiumContainer', {
+            animation: false,//是否创建动画小器件，左下角仪表 
+            timeline: false,//是否显示时间轴    
+            sceneModePicker: false,//是否显示3D/2D选择器    
+            baseLayerPicker: true,//是否显示图层选择器   
+            geocoder: false,//是否显示geocoder小器件，右上角查询按钮   
+            scene3DOnly: true,//如果设置为true，则所有几何图形以3D模式绘制以节约GPU资源 
+            navigationHelpButton: false,//是否显示右上角的帮助按钮
+            homeButton: true,//是否显示Home按钮
+            infoBox: true,//是否显示信息框    
+            showRenderLoopErrors: false,//如果设为true，将在一个HTML面板中显示错误信息
+            //imageryProvider : new Cesium.WebMapTileServiceImageryProvider({ url: "http://t0.tianditu.com/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles", layer: "tdtVecBasicLayer", style: "default", format: "image/jpeg", tileMatrixSetID: "GoogleMapsCompatible", show: false }),
+            //terrainProvider:Cesium.createWorldTerrain()
+
+        });
+        //全球影像中文注记服务
+        //viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({ url: "http://t0.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg", layer: "tdtAnnoLayer", style: "default", format: "image/jpeg", tileMatrixSetID: "GoogleMapsCompatible", show: false }));
+
+        var terrainProvider = new Cesium.CesiumTerrainProvider({
+            url: "./../../datas/cesiumDatas/terrain_default",
+        });
+        viewer.terrainProvider = terrainProvider;
+
+        var tileset = new Cesium.Cesium3DTileset({
+            url: "./../../datas/cesiumDatas/neu2/tileset.json"
+        });
+        viewer.scene.primitives.add(tileset);
+        viewer.zoomTo(tileset);
+
+    </script>
+</body>
+</html>

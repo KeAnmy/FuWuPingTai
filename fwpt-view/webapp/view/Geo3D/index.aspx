@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>三维地质</title>
     <!--#include file="../common/config.html"-->
-
     <link href="../../css/Geo3D/index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../js/Geo3D/ThreeMapBase.js"> </script>
     <script type="text/javascript">
-        var ss = Smge.MenuManage.url;
+
+        $(document).ready(function () {
+            Smge.ThreeMapBase.init();
+        });
+
     </script>
 </head>
 <body>
@@ -31,14 +35,13 @@
                     <h3><b></b><a href="#" class="active">在线浏览</a>
                     </h3>
                 </div>
-
             </div>
         </div>
         <div class="content" style="padding: 0; background-color: #f1f1f1">
             <ul class="all_published clearfix">
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>孔雀城一期工程可视化项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -76,7 +79,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>智慧城市地下管线应用项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -114,7 +117,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>贵阳地铁项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -152,7 +155,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>沈阳新世界会展中心详勘项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -190,7 +193,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>孔雀城一期工程可视化项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -228,7 +231,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>智慧城市地下管线应用项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -266,7 +269,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>贵阳地铁项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -304,7 +307,7 @@
                 </li>
                 <li class="col">
                     <div class="el-card is-always-shadow">
-                        <div class="el-card__body">
+                        <div class="el-card_body">
                             <h4>沈阳新世界会展中心详勘项目
                             <ul>
                                 <li><a href="javascript:void(0)">项目详情
@@ -349,7 +352,7 @@
 
 
     <!-- content end -->
-
     <!--#include file="../common/footer.html"-->
+
 </body>
 </html>
